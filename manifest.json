@@ -1,13 +1,14 @@
 {
   "name": "PBXRecordings",
-  "version": "0.0.2",
+  "version": "1.15.2.25",
   "description": "Allows PCI recording privacy during credit card transactions.",
 
   "update_url": "http://pbx.secure.a1comms.net/deploy/chrome.xml",
 
   "background": { "scripts": ["background.js"] },
   "content_scripts": [
-    { "matches": ["https://*/*"], "js": ["content_script.js"] }
+    { "matches": ["https://*/*"], "js": ["content_script.js"] },
+	{ "matches": ["https://*.sky.com/*"], "js": ["content_script_sky.js"] }
   ],
   "permissions": [
     "http://localhost:9871/*"
