@@ -31,8 +31,6 @@ function attachOnFocusHandler(item) {
 window.addEventListener ("load", myMain, false);
 
 function myMain (evt) {
-    // DO YOUR STUFF HERE.
-
     var doc = document.body;
     PBXRecording.BrowserOverlay.stopPrivacy("");
 
