@@ -1,11 +1,11 @@
-if ("undefined" == typeof(PBXRecording)) {
-  var PBXRecording = {};
+if ("undefined" == typeof(PBXRecordingSky)) {
+  var PBXRecordingSky = {};
 };
 
 /**
  * Controls the browser overlay for the Ctalk Recording extension.
  */
-PBXRecording.BrowserOverlay = {
+PBXRecordingSky.BrowserOverlay = {
 
   startPrivacy : function(aEvent) {
 	console.log("stopRecording");
@@ -24,25 +24,25 @@ PBXRecording.BrowserOverlay = {
 
 };
 
-var PBXRecordingRunning = true;
+var PBXRecordingSkyRunning = true;
 
-window.addEventListener ("load", myMain, false);
-window.addEventListener ("DOMSubtreeModified", myMain, false);
+window.addEventListener ("load", PBXRecordingSkyMyMain, false);
+window.addEventListener ("DOMSubtreeModified", PBXRecordingSkyMyMain, false);
 
-function myMain (evt) {
+function PBXRecordingSkyMyMain (evt) {
     var li = document.getElementById('payment');
 	if (li){
 		if (li.className == "current"){
-			if (PBXRecordingRunning){
+			if (PBXRecordingSkyRunning){
 				console.log("Stop the recordings...");
-				PBXRecording.BrowserOverlay.startPrivacy("");
-				PBXRecordingRunning = false;
+				PBXRecordingSky.BrowserOverlay.startPrivacy("");
+				PBXRecordingSkyRunning = false;
 			}
 		} else {
-			if (!PBXRecordingRunning){
+			if (!PBXRecordingSkyRunning){
 				console.log("Start the recording...");
-				PBXRecording.BrowserOverlay.stopPrivacy("");
-				PBXRecordingRunning = true;
+				PBXRecordingSky.BrowserOverlay.stopPrivacy("");
+				PBXRecordingSkyRunning = true;
 			}
 		}
 	}

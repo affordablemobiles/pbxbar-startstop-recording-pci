@@ -28,9 +28,10 @@ function attachOnFocusHandler(item) {
 	}
 }
 
-window.addEventListener ("load", myMain, false);
+window.addEventListener ("load", PBXRecordingMyMain, false);
 
-function myMain (evt) {
+function PBXRecordingMyMain (evt) {
+    
     var doc = document.body;
     PBXRecording.BrowserOverlay.stopPrivacy("");
 
